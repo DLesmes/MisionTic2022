@@ -12,7 +12,7 @@
     - [Medium](https://medium.com/fintechexplained/everything-about-python-from-beginner-to-advance-level-227d52ef32d2)
     - [Top computer languages](https://statisticstimes.com/tech/top-computer-languages.php)
     - [Top 10 In-Demandprogramminglanguagestolearnin 2020](https://towardsdatascience.com/top-10-in-demand-programming-languages-to-learn-in-2020-4462eb7d8d3e)
-    - [WhatisPython? ExecutiveSummary](https://www.python.org/doc/essays/blurb)
+    - [What is Python? Executive Summary](https://www.python.org/doc/essays/blurb)
     - [IntroductiontoPython](https://www.w3schools.com/python/pythonintro.asp)
     - [16 FactsaboutPythonProgrammingthateveryGeekshouldknow](https://data-flair.training/blogs/facts-about-python-programming)
     - [PythonovertakesFrench as themostpopular‘language’taughtinprimaryschools](https://www.ocadogroup.com/media/press-releases/year/2015/python-overtakes-french-most-popular-language-taught-primary-schools)
