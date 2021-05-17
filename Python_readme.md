@@ -21,6 +21,9 @@
   * [Basic arithmetic operators](https://github.com/DLesmes/MisionTic2022/blob/main/Books/Eje%201%20ppt%20Tema%205.pdf)
     - [Curso Python desde cero #6](https://www.youtube.com/watch?v=6sOEpHItJHs)
     - [An Informal IntroductiontoPython](https://docs.python.org/3/library/stdtypes.html#boolean-operations-and-or-not)
+  * [Conditional control structures](https://github.com/DLesmes/MisionTic2022/blob/main/Books/Eje%202%20Tema%201.pdf)
 
-2. [Challenges](https://github.com/DLesmes/MisionTic2022/tree/main/retos)
+2. [Vocabulay](https://app.memrise.com/course/173951/think-python-vocabulary/1/?action=next)
+
+3. [Challenges](https://github.com/DLesmes/MisionTic2022/tree/main/retos)
   * [Reto#1](https://github.com/DLesmes/MisionTic2022/tree/main/retos/reto%231)
