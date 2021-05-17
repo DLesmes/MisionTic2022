@@ -1,7 +1,7 @@
 def suma(a,b):
-    print('El resultado es' + str(a+b))
+    print('El resultado es ' + str(a+b))
 
-if __name__== "__main___":
+if __name__== "__main__":
     a = int(input('Give me the first add :'))
     b = int(input('Give me the second add :'))
     suma(a,b)
