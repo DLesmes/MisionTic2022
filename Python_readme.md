@@ -27,3 +27,4 @@
 
 3. [Challenges](https://github.com/DLesmes/MisionTic2022/tree/main/retos)
   * [Reto#1](https://github.com/DLesmes/MisionTic2022/tree/main/retos/reto%231)
+  * [Reto#2](https://github.com/DLesmes/MisionTic2022/blob/main/retos/reto%233/reto_semana2.py)
