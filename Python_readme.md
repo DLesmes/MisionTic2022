@@ -22,6 +22,7 @@
     - [Curso Python desde cero #6](https://www.youtube.com/watch?v=6sOEpHItJHs)
     - [An Informal IntroductiontoPython](https://docs.python.org/3/library/stdtypes.html#boolean-operations-and-or-not)
   * [Conditional control structures](https://github.com/DLesmes/MisionTic2022/blob/main/Books/Eje%202%20Tema%201.pdf)
+  * [Iterative control structures](https://github.com/DLesmes/MisionTic2022/blob/main/Books/Eje%203%20Tema%201.pdf)
 
 2. [Vocabulay](https://app.memrise.com/course/173951/think-python-vocabulary/1/?action=next)
 
