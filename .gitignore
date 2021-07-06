@@ -158,3 +158,5 @@ dmypy.json
 hs_err_pid*
 
 # End of https://www.toptal.com/developers/gitignore/api/java
+/java/exercises/Miscelanea1J40/nbproject/private/
+/java/retos/JavaApplication1/nbproject/private/
