@@ -19,7 +19,7 @@ public class ConsultasContacto extends Conexion {
         PreparedStatement insertStatement = null;
         Connection conexion = getConexion();
         
-        String sql = "INSERT INTO contactos (identificacion, nombre, apellido, tipodeidentificacion, telefono, direccion, correo) VALUES(?,?,?,?,?,?,?,?)";
+        String sql = "INSERT INTO contactos (identificacion, nombre, apellido, genero, tipoidentificacion, telefono, direccion, correo) VALUES(?,?,?,?,?,?,?,?)";
         try {
             insertStatement = conexion.prepareStatement(sql);
             insertStatement.setInt(1, contacts.getIdentificacion());
@@ -48,7 +48,7 @@ public class ConsultasContacto extends Conexion {
     public boolean modificar(Contactos contacts){
         PreparedStatement updateStatement = null;
         Connection conexion = getConexion();
-        String sql = "UPDATE contactos SET identificacion=?, apellido=?, genero=?, tipoidentificacion=?, telefono=?, direccion =?, correo=? WHERE identificacion=?";
+        String sql = "UPDATE contactos SET identificacion=?, nombre=?, apellido=?, genero=?, tipoidentificacion=?, telefono=?, direccion =?, correo=? WHERE identificacion=?";
         
         try {
             updateStatement = conexion.prepareStatement(sql);
@@ -92,7 +92,7 @@ public class ConsultasContacto extends Conexion {
             try {
                 conexion.close();
             } catch (SQLException e) {
-                System.err.println("Erro al cerrar la conexion al eliminar un contacto"+e.getMessage());
+                System.err.println("Error al cerrar la conexion al eliminar un contacto"+e.getMessage());
             }
         }
     }

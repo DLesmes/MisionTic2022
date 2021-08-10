@@ -5,6 +5,11 @@
  */
 package reto5_ii;
 
+import CONTROLADOR.ControladorContactos;
+import MODELO.ConsultasContacto;
+import MODELO.Contactos;
+import VISTA.JFContactos;
+
 /**
  *
  * @author asf
@@ -16,6 +21,13 @@ public class Reto5_II {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Contactos contacto = new Contactos();
+        ConsultasContacto consultas = new ConsultasContacto();
+        JFContactos vista = new JFContactos();
+        
+        ControladorContactos controller = new ControladorContactos(contacto, consultas, vista);
+        controller.iniciaVista();
+        vista.setVisible(true);
     }
     
 }

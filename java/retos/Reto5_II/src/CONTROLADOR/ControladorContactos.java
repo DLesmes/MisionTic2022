@@ -75,9 +75,51 @@ public class ControladorContactos implements ActionListener{
         }
         
         if (e.getSource() == vista.btnActualizar) {
+            contacts.setId(Integer.parseInt(vista.txtBuscar.getText()));
+            contacts.setIdentificacion(Integer.parseInt(vista.txtNumIndetificacion.getText()));
+            contacts.setNombre(vista.txtNombre.getText());
+            contacts.setApellido(vista.txtApellido.getText());
+            contacts.setGenero(vista.txtGenero.getText());
+            contacts.setTipoIdentificacion(vista.txtTipoID.getText());
+            contacts.setTelefono(vista.txtTelefono.getText());
+            contacts.setDireccion(vista.txtDireccion.getText());
+            contacts.setCorreo(vista.txtCorreo.getText());
+            
+            if (consultasBD.modificar(contacts)) {
+                JOptionPane.showMessageDialog(null, "El contacto fue actualizado correctamente");
+                
+            } else {
+                JOptionPane.showMessageDialog(null, "Error al actualizar el contacto en la base de datos");
+            }
             
         }
+        
+        if (e.getSource() == vista.btnEliminar) {
+            contacts.setId(Integer.parseInt(vista.txtBuscar.getText()));
+            if (consultasBD.eliminar(contacts)) {
+                JOptionPane.showMessageDialog(null, "El contacto fue eliminado corectamente de la base de datos");
+                limpiarTxtFields();
+            } else {
+                JOptionPane.showMessageDialog(null, "Error al eliminar el contacto en la base de datos");
+            }
+        }
+        
+        if (e.getSource() == vista.btnBuscar) {
+            contacts.setCodigo(vista.txtNumIndetificacion.getText());
+            if (consultasBD.eliminar(contacts)) {
+                vista.txtBuscar.setText(String.valueOf(contacts.getId()));
+                vista.txtNumIndetificacion.setText(String.valueOf(contacts.getIdentificacion()));
+                vista.txtNombre.setText(contacts.getNombre());
+                vista.txtApellido.setText(contacts.getApellido());
+                vista.txtGenero.setText(contacts.getGenero());
+                vista.txtTipoID.setText(contacts.getTipoIdentificacion());
+                vista.txtTelefono.setText(contacts.getTelefono());
+                vista.txtDireccion.setText(contacts.getDireccion());
+                vista.txtCorreo.setText(contacts.getCorreo());
+            } else {
+                JOptionPane.showMessageDialog(null, "No hay registros en la base de datos con esa identificación");
+                limpiarTxtFields();
+            }
+        }
     }
-    
-    
 }
