@@ -7,6 +7,7 @@ package MODELO;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
@@ -60,6 +61,8 @@ public class ConsultasContacto extends Conexion {
             updateStatement.setString(6, contacts.getTelefono());
             updateStatement.setString(7, contacts.getDireccion());
             updateStatement.setString(8, contacts.getCorreo());
+            updateStatement.setInt(9, contacts.getIdentificacion());
+            updateStatement.execute();
             return true;
             
         } catch (SQLException e) {
@@ -86,13 +89,47 @@ public class ConsultasContacto extends Conexion {
             deleteStatement.execute();
             return true;
         } catch (Exception e) {
-            System.err.println("Error al eliinar el contacto"+ e.getMessage());
+            System.err.println("Error al eliminar el contacto"+ e.getMessage());
             return false;
         } finally{
             try {
                 conexion.close();
             } catch (SQLException e) {
                 System.err.println("Error al cerrar la conexion al eliminar un contacto"+e.getMessage());
+            }
+        }
+    }
+    
+    public boolean seleccionar(Contactos contacts)  {
+        PreparedStatement selectStatement = null;
+        Connection conexion = getConexion();
+        
+        String sql = "SELECT * FROM contactos WHERE identificacion =?";
+        
+        try {
+            selectStatement = conexion.prepareStatement(sql);
+            selectStatement.setInt(1, contacts.getIdentificacion());
+            ResultSet query = selectStatement.executeQuery();
+                  while (query.next()){
+                      contacts.setApellido(query.getString(3));
+                      contacts.setCorreo(query.getString(8));
+                      contacts.setDireccion(query.getString(7));
+                      contacts.setGenero(query.getString(4));
+                      contacts.setIdentificacion(query.getInt(1));
+                      contacts.setNombre(query.getString(2));
+                      contacts.setTelefono(query.getString(6));
+                      contacts.setTipoIdentificacion(query.getString(5));
+                  }
+            return true;
+        
+        } catch (Exception e) {
+            System.err.println("Error al consultar el usuario"+e.getMessage());
+            return false;
+        } finally {
+            try {
+                conexion.close();
+            } catch (Exception ex) {
+                System.err.println("Error al cerrar la conexion al consultar un contacto"+ex.getMessage());
             }
         }
     }

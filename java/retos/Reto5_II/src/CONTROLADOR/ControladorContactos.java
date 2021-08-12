@@ -33,6 +33,7 @@ public class ControladorContactos implements ActionListener{
         this.vista.btnBuscar.addActionListener(this);
         this.vista.btnCrear.addActionListener(this);
         this.vista.btnEliminar.addActionListener(this);
+        this.vista.btnLimpiar.addActionListener(this);
     }
     
     public void iniciaVista() {
@@ -75,7 +76,7 @@ public class ControladorContactos implements ActionListener{
         }
         
         if (e.getSource() == vista.btnActualizar) {
-            contacts.setId(Integer.parseInt(vista.txtBuscar.getText()));
+            //contacts.setId(Integer.parseInt(vista.txtBuscar.getText()));
             contacts.setIdentificacion(Integer.parseInt(vista.txtNumIndetificacion.getText()));
             contacts.setNombre(vista.txtNombre.getText());
             contacts.setApellido(vista.txtApellido.getText());
@@ -105,9 +106,9 @@ public class ControladorContactos implements ActionListener{
         }
         
         if (e.getSource() == vista.btnBuscar) {
-            contacts.setCodigo(vista.txtNumIndetificacion.getText());
-            if (consultasBD.eliminar(contacts)) {
-                vista.txtBuscar.setText(String.valueOf(contacts.getId()));
+            contacts.setIdentificacion(Integer.parseInt(vista.txtBuscar.getText()));
+            if (consultasBD.seleccionar(contacts)) {
+                //vista.txtBuscar.setText(String.valueOf(contacts.getId()));
                 vista.txtNumIndetificacion.setText(String.valueOf(contacts.getIdentificacion()));
                 vista.txtNombre.setText(contacts.getNombre());
                 vista.txtApellido.setText(contacts.getApellido());
@@ -121,5 +122,10 @@ public class ControladorContactos implements ActionListener{
                 limpiarTxtFields();
             }
         }
+
+        if (e.getSource() == vista.btnLimpiar) {
+            limpiarTxtFields();
+        }
+
     }
 }
