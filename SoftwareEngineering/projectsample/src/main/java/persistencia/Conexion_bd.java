@@ -11,7 +11,7 @@ package persistencia;
  */
 import java.sql.*;
 
-public class ConexionBD {
+public class Conexion_bd {
 
     private String url = "";
     private String DB_driver = "";
@@ -24,7 +24,7 @@ public class ConexionBD {
     private ResultSet rs = null;
     private boolean local;
 
-    public ConexionBD() {
+    public Conexion_bd() {
 
         local = false;
         DB_driver = "com.mysql.jdbc.Driver";
