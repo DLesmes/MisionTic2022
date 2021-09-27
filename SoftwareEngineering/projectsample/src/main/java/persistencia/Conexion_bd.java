@@ -73,5 +73,44 @@ public class Conexion_bd {
         }
         return rs;
     }
+    public boolean insertarBD(String sentencia) {
 
+        try {
+            stmt = con.createStatement();
+            stmt.execute(sentencia);
+        } catch (SQLException | RuntimeException sqlex) {
+            System.out.println("Error en insertar: " + sqlex.getMessage());
+            return false;
+        }
+        return true;
+
+    }
+
+    public boolean actualizarBD(String sentencia) {
+        try {
+            stmt = con.createStatement();
+            stmt.executeUpdate(sentencia);
+        } catch (SQLException | RuntimeException sqlex) {
+            System.out.println("Error en actualizar: " + sqlex.getMessage());
+            return false;
+        }
+        return true;
+    }
+
+    public boolean borrarBD(String sentencia) {
+        try {
+            stmt = con.createStatement();
+            stmt.execute(sentencia);
+        } catch (SQLException | RuntimeException sqlex) {
+            System.out.println("Error en borrar: " + sqlex.getMessage());
+            return false;
+        }
+        return true;
+    }
+    
+    public  static void main(String[] args){
+    
+        ConexionBD ejemplo= new ConexionBD();
+    
+    }
 }
