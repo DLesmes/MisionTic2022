@@ -110,7 +110,7 @@ public class Conexion_bd {
     
     public  static void main(String[] args){
     
-        ConexionBD ejemplo= new ConexionBD();
+        Conexion_bd ejemplo= new Conexion_bd();
     
     }
 }

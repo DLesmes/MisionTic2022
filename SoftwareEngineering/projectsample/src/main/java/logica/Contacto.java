@@ -12,7 +12,7 @@ package logica;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.sql.SQLException;
-import persistencia.ConexionBD;
+import persistencia.Conexion_bd;
 
 public class Contacto {
 
@@ -26,10 +26,10 @@ public class Contacto {
     private String correo;
     private String identificacion;
     private String edad;
-    private ConexionBD conexion;
+    private Conexion_bd conexion;
 
     public Contacto() {
-        this.conexion = new ConexionBD();
+        this.conexion = new Conexion_bd();
     }
 
     public int getContacto_id() {
