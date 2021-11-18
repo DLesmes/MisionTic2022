@@ -167,3 +167,8 @@ hs_err_pid*
 /java/exercises/Miscelanea4J40/nbproject/private/
 /java/retos/Reto5/nbproject/private/
 /java/retos/Reto5_II/nbproject/private/
+
+### node ###
+node_modules
+dist
+package-lock.json
